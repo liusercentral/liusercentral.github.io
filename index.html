@@ -16,14 +16,43 @@
 				text-align: center;
 				font-size: 2em;
 				font-family: sans-serif;
-				color: aqua;
-				margin-top: 75px;
 			}
 			
 			p {
 				color: white;
 			}
-			
+
+			.subheading {
+				color: aqua;
+				margin-top: 75px;
+			}
+
+			#top {
+				background-color: rgba(255, 255, 255, 0.9);
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				height: 86px;
+				z-index: -1;
+			}
+
+			#nav-links a {
+				background-color: rgba(200, 225, 255, 0.9);
+				color: black;
+				text-decoration: none;
+				border-style: outset;
+				border-color: blue;
+				height: 35px;
+				padding: 20px;
+				margin: 15px;
+			}
+
+			#nav-links a:hover {
+				color: gray;
+				border-style: outset;
+			}
+
 			#main-bg {
 				background-color: rgba(0, 0, 0, 0.75);
 				margin-top: 0px;
@@ -58,24 +87,32 @@
 	</head>
 	
 	<body>
+		<div id="top">
+		</div>
+		<div id="nav-links">
+			<h2>
+				<a href="https://liusercentral.github.io">Home</a>
+				<a href="https://liusercentral.github.io/friends">Friends</a>
+			</h2>
+		</div>
 		<div id="main-bg">
 			<h1 id="title">The Liuser Central</h1>
 			
 			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><h6 id="troll">100% not suspicious link</h6></a>
 			
-			<h2 id="under-troll">What is this?</h2>
+			<h2 id="under-troll" class="subheading">What is this?</h2>
 			<p>I have absolutely no idea.</p>
 			
-			<h2>Why is this here?</h2>
+			<h2 class="subheading">Why is this here?</h2>
 			<p>I have no about this idea either.</p>
 
-			<h2>Why should I stay here?</h2>
+			<h2 class="subheading">Why should I stay here?</h2>
 			<p>You shouldn't.</p>
 			
-			<h2>Why did you make this?</h2>
+			<h2 class="subheading">Why did you make this?</h2>
 			<p>ASK ME SOMETHING THAT I ACTUALLY KNOW!</p>
 			
-			<h2>Which is?</h2>
+			<h2 class="subheading">Which is?</h2>
 			<p>go away</p>
 		</div>
 		
