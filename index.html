@@ -145,11 +145,52 @@
 		
 		<script>
 			// define elements
+			var mainBgEl = document.getElementById("main-bg");
+			var topEl = document.getElementById("top");
+			var navLinksEl = document.getElementById("nav-links");
+			var navLinksAEls = document.querySelectorAll("#nav-links a");
+			var titleEl = document.getElementById("title");
+			var subheadingEls = document.getElementsByClassName("subheading");
+			var textEls = document.querySelectorAll("#main-bg p");
 			var trollButtonEl = document.getElementById("troll-button");
 
-			// define event function
+			// define event functions
 			var onTrollClick = function() {
+				// delete troll button
+				trollButtonEl.innerHTML = "";
+				trollButtonEl.style.width = "0px";
+				trollButtonEl.style.height = "0px";
+
 				document.body.style.backgroundImage = "url(https://s14-eu5.startpage.com/cgi-bin/serveimage?url=https%3A%2F%2Flh3.googleusercontent.com%2FVHpW3cElRSRa7IbgYcKIe2SQahdumEbCzi8j8_vU019nZcJVt-NObr30tmubGSnpdg&sp=cf7f7d3252030e388ec2ff338da4d4e0)";
+
+				// change font to comic sans
+				for (var i = 0; i < navLinksAEls.length; i++) {
+					navLinksAEls[i].style.fontFamily = "Comic Sans MS";
+				}
+				titleEl.style.fontFamily = "Comic Sans MS";
+				document.body.style.fontFamily = "Comic Sans MS";
+				for (var i = 0; i < subheadingEls.length; i++) {
+					subheadingEls[i].style.fontFamily = "Comic Sans MS";
+				}
+				trollButtonEl.style.fontFamily = "Comic Sans MS";
+
+				// set eyerape colors
+				mainBgEl.style.background = "rgba(255, 0, 255, 0.8)";
+				topEl.style.background = "rgba(255, 153, 0, 0.8)";
+				for (var i = 0; i < navLinksAEls.length; i++) {
+					navLinksAEls[i].style.background = "rgba(0, 255, 255, 0.9)";
+					navLinksAEls[i].style.color = "rgba(255, 0, 255)";
+				}
+				titleEl.style.color = "rgb(255, 0, 255)";
+				titleEl.style.background = "rgb(51, 204, 51)";
+				for (var i = 0; i < textEls.length; i++) {
+					textEls[i].style.color = "rgb(51, 204, 51)";
+				}
+				for (var i = 0; i < subheadingEls.length; i++) {
+					subheadingEls[i].style.color = "rgb(51, 204, 51)";
+				}
+
+				titleEl.textContent = "YOU SHOULD'VE LISTENED";
 			}
 
 			// event listeners
